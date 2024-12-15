@@ -1,0 +1,22 @@
+
+
+not all design patterns are important, some of the design patterns are
+
+Creation Design patterns
+Singleton
+Abstract factory |factory
+
+
+
+Structural patterns:
+
+
+Behavioural patterns:
+State
+Observer
+Strategy
+Chain of Responsibility Pattern
+Template Method Pattern
+Command Pattern
+Visitor
+Momento
