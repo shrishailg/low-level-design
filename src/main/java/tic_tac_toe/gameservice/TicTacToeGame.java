@@ -51,6 +51,7 @@ public class TicTacToeGame {
                 continue;
             }
 
+            //expecting the input in the form ==> 1,0
             String[] inputs = inputScanner.split(",");
 
             int row = Integer.parseInt(inputs[0].trim());
@@ -89,11 +90,7 @@ public class TicTacToeGame {
             return false;
         }
 
-        if (piece.getPieceType() == PieceType.X) {
-            board[row][col] = new PlayingPiece(piece);
-        } else {
-            board[row][col] = new PlayingPiece(piece);
-        }
+        board[row][col] = new PlayingPiece(piece);
 
         return true;
     }

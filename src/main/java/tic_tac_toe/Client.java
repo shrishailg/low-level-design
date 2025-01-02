@@ -2,8 +2,6 @@ package main.java.tic_tac_toe;
 
 import main.java.tic_tac_toe.board.Board;
 import main.java.tic_tac_toe.gameservice.TicTacToeGame;
-import main.java.tic_tac_toe.pieces.Piece;
-import main.java.tic_tac_toe.pieces.PieceType;
 import main.java.tic_tac_toe.players.Player;
 import main.java.tic_tac_toe.players.PlayerO;
 import main.java.tic_tac_toe.players.PlayerX;
@@ -14,12 +12,8 @@ import java.util.Scanner;
 public class Client {
 
     public static void main(String... args) {
-
-        Piece piece1 = new Piece(PieceType.X);
-        Piece piece2 = new Piece(PieceType.O);
-
-        PlayingPiece playingPiece1 = new PlayerX(piece1);
-        PlayingPiece playingPiece2 = new PlayerO(piece2);
+        PlayingPiece playingPiece1 = new PlayerX();
+        PlayingPiece playingPiece2 = new PlayerO();
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the player1 name: ");

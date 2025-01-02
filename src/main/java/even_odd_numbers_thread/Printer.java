@@ -14,7 +14,6 @@ public class Printer implements Runnable {
     private final PrinterType currentPrinterType;
     private final PrinterType nextPrinterType;
     private final int maxValue;
-    private final ReentrantReadWriteLock reentrantlock;
 
     public Printer(Integer step, State state, Integer startValue, PrinterType currentPrinterType,
                    PrinterType nextPrinterType, Integer maxValue) {
@@ -25,7 +24,6 @@ public class Printer implements Runnable {
         this.currentPrinterType = currentPrinterType;
         this.nextPrinterType = nextPrinterType;
         this.maxValue = maxValue;
-        this.reentrantlock =  new ReentrantReadWriteLock();
     }
 
 

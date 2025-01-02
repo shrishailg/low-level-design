@@ -43,6 +43,7 @@ public class LruCache<K,V> {
             cache.put(key, node);
             linkedList.add(node);
             size++;
+            reentrantLock.unlock();
             return;
         }
 
@@ -54,6 +55,7 @@ public class LruCache<K,V> {
             linkedList.add(node);
             cache.remove(nodeTobeRemoved.getKey());
             cache.put(key, node);
+            reentrantLock.unlock();
             return;
         }
 
@@ -66,8 +68,10 @@ public class LruCache<K,V> {
     // delete value from the cache
     public void delete(K key, V value) {
         Node<K,V> node = new Node<>(key, value);
+        reentrantLock.lock();
         linkedList.remove(node);
         cache.remove(key);
+        reentrantLock.lock();
         size--;
     }
 
