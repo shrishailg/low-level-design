@@ -56,16 +56,17 @@ public class LfuCache<K,V> {
             cache.put(key, node);
         }
 
+
+        if (cache.size() == capacity) {
+            evictNode();
+        }
+
         Node<K,V> newNode = new Node<>(key, value, 1);
 
         LinkedList<K,V> linkedList = freqMap.getOrDefault(newNode.getFreq(), new LinkedList<>());
         linkedList.add(newNode);
         freqMap.put(newNode.getFreq(), linkedList);
         cache.put(key, newNode);
-
-        if (cache.size() > capacity) {
-            evictNode();
-        }
     }
 
     private void evictNode() {

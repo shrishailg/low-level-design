@@ -3,6 +3,8 @@ package main.java.payment_recommendation;
 import java.util.*;
 
 public class PaymentRecommendationService {
+
+
     public List<PaymentInstrument> recommendPaymentInstruments(User user, Cart cart) {
         List<PaymentInstrument> recommendedInstruments = new ArrayList<>();
         Set<PaymentType> allowedPaymentTypes = getAllowedPaymentTypes(cart);
