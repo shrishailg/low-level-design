@@ -1,6 +1,6 @@
 package main.java.coffeevendingmachine;
 
-import java.util.HashMap;
+
 import java.util.Map;
 
 public class Coffee {

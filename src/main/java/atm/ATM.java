@@ -1,7 +1,5 @@
 package main.java.atm;
 
-import java.sql.Timestamp;
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class ATM {
